@@ -1,0 +1,242 @@
+[
+  {
+    "hash": "fcab4a7194ec98ffd93b6144421a13ff6b39ab2f56ebc4ff6472a4a3b229a4c9",
+    "type": "phone",
+    "display": "+60****6789",
+    "report_ids": [
+      "SC-000001"
+    ],
+    "categories": [
+      "fake_job"
+    ],
+    "countries": [
+      "Malaysia"
+    ],
+    "latest_date": "2026-10-12",
+    "evidence_status": "multiple_reports",
+    "corroboration_count": 4,
+    "disputed": false
+  },
+  {
+    "hash": "9d66db859634186a7c02e3e30ff6e208126a059ca4e5353870400cfd16877946",
+    "type": "social_profile",
+    "display": "fx***",
+    "report_ids": [
+      "SC-000002"
+    ],
+    "categories": [
+      "investment"
+    ],
+    "countries": [
+      "Singapore"
+    ],
+    "latest_date": "2026-10-05",
+    "evidence_status": "evidence_reviewed",
+    "corroboration_count": 7,
+    "disputed": false
+  },
+  {
+    "hash": "4ff6cfd601e34c72e5994552db74cc423ad70af9841b6b0d5e9ade6b89d3f90a",
+    "type": "domain",
+    "display": "lux***.shop",
+    "normalized": "luxurydeals-2026.shop",
+    "report_ids": [
+      "SC-000003"
+    ],
+    "categories": [
+      "online_shopping"
+    ],
+    "countries": [
+      "United States"
+    ],
+    "latest_date": "2026-10-20",
+    "evidence_status": "multiple_reports",
+    "corroboration_count": 5,
+    "disputed": false
+  },
+  {
+    "hash": "4534f9eebb5a2bf250063f0758951bb5c3029cd427045431f29e3e638713bcde",
+    "type": "domain",
+    "display": "roy***.com",
+    "normalized": "royalmail-parcel-redelivery.com",
+    "report_ids": [
+      "SC-000004"
+    ],
+    "categories": [
+      "phishing"
+    ],
+    "countries": [
+      "United Kingdom"
+    ],
+    "latest_date": "2026-10-18",
+    "evidence_status": "independently_confirmed",
+    "corroboration_count": 12,
+    "disputed": false
+  },
+  {
+    "hash": "ae153b0c979db454c1bb05ddfba8907426b56127852d14aa0ac9385521f69b6c",
+    "type": "social_profile",
+    "display": "ja***",
+    "report_ids": [
+      "SC-000005"
+    ],
+    "categories": [
+      "romance"
+    ],
+    "countries": [
+      "Australia"
+    ],
+    "latest_date": "2026-09-28",
+    "evidence_status": "multiple_reports",
+    "corroboration_count": 3,
+    "disputed": false
+  },
+  {
+    "hash": "97a814a987fd7f839aaff5917b7e8e6acbc8f9f33526c785aad45febe0d798cf",
+    "type": "phone",
+    "display": "+91****3210",
+    "report_ids": [
+      "SC-000006"
+    ],
+    "categories": [
+      "impersonation"
+    ],
+    "countries": [
+      "India"
+    ],
+    "latest_date": "2026-10-22",
+    "evidence_status": "multiple_reports",
+    "corroboration_count": 9,
+    "disputed": false
+  },
+  {
+    "hash": "bcf9a00ca627d5475449b6ebb2a2c520ca4c103d11ab72b4066efed75ef2dcae",
+    "type": "social_profile",
+    "display": "of***",
+    "report_ids": [
+      "SC-000007"
+    ],
+    "categories": [
+      "giveaway"
+    ],
+    "countries": [
+      "Canada"
+    ],
+    "latest_date": "2026-10-15",
+    "evidence_status": "evidence_reviewed",
+    "corroboration_count": 6,
+    "disputed": false
+  },
+  {
+    "hash": "11c139a7f1db75491e7204fbcfa7743747a39ede5df58c936a0093b2d06e22ff",
+    "type": "phone",
+    "display": "+23****45678",
+    "report_ids": [
+      "SC-000008"
+    ],
+    "categories": [
+      "advance_payment"
+    ],
+    "countries": [
+      "Nigeria"
+    ],
+    "latest_date": "2026-10-08",
+    "evidence_status": "unverified",
+    "corroboration_count": 1,
+    "disputed": false
+  },
+  {
+    "hash": "6d8210b2ee1fd11bb01eaf5098444ee131bd1eb5afbf09b73add9b543966b6d9",
+    "type": "domain",
+    "display": "pos***.de",
+    "normalized": "postbank-login-secure.de",
+    "report_ids": [
+      "SC-000009"
+    ],
+    "categories": [
+      "fake_website"
+    ],
+    "countries": [
+      "Germany"
+    ],
+    "latest_date": "2026-10-19",
+    "evidence_status": "multiple_reports",
+    "corroboration_count": 4,
+    "disputed": false
+  },
+  {
+    "hash": "d33a6a8946525c5432c3b1c6d786c4446003a7425ab47917cead2173e24cb614",
+    "type": "domain",
+    "display": "gad***.store",
+    "normalized": "gadget-mega-sale.store",
+    "report_ids": [
+      "SC-000010"
+    ],
+    "categories": [
+      "online_shopping"
+    ],
+    "countries": [
+      "United Arab Emirates"
+    ],
+    "latest_date": "2026-10-10",
+    "evidence_status": "multiple_reports",
+    "corroboration_count": 8,
+    "disputed": false
+  },
+  {
+    "hash": "da5ed33b6f4ec890c1d06755d968012c45ca68b03f95d6f4b54e2cdce939369b",
+    "type": "phone",
+    "display": "+27****5678",
+    "report_ids": [
+      "SC-000011"
+    ],
+    "categories": [
+      "investment"
+    ],
+    "countries": [
+      "South Africa"
+    ],
+    "latest_date": "2026-10-01",
+    "evidence_status": "independently_confirmed",
+    "corroboration_count": 15,
+    "disputed": false
+  },
+  {
+    "hash": "55300c6d4d108a490d9c746df0cff04a90483bee9232b153880a206ea29d5df3",
+    "type": "email",
+    "display": "sup***@bkash-verify-secure.com",
+    "normalized": "support@bkash-verify-secure.com",
+    "report_ids": [
+      "SC-000012"
+    ],
+    "categories": [
+      "phishing"
+    ],
+    "countries": [
+      "Bangladesh"
+    ],
+    "latest_date": "2026-10-23",
+    "evidence_status": "unverified",
+    "corroboration_count": 2,
+    "disputed": false
+  },
+  {
+    "hash": "7a665184fc822d8ed78179238869ee61d4e1bab21d273b9684ce5c46603e21ce",
+    "type": "domain",
+    "display": "cou***.example",
+    "normalized": "country-crafts-ireland.example",
+    "report_ids": [
+      "SC-000013"
+    ],
+    "categories": [
+      "online_shopping"
+    ],
+    "countries": [
+      "Ireland"
+    ],
+    "latest_date": "2026-09-15",
+    "evidence_status": "unverified",
+    "corroboration_count": 1,
+    "disputed": true
+  }
+]
