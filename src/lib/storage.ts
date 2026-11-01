@@ -88,20 +88,30 @@ class GitHubStore implements ReportStore {
 
   async listApprovedReports(): Promise<ScamReport[]> {
     const idx = await this.fetchJson("data/indexes/reports-index.json");
-    if (!idx || !Array.isArray(idx.reports)) return [];
-    return idx.reports as ScamReport[];
+    if (idx && Array.isArray(idx.reports) && idx.reports.length > 0) {
+      return idx.reports as ScamReport[];
+    }
+    // Fallback to bundled seed data if GitHub repo has no published reports yet.
+    return seedReportList;
   }
 
   async getReport(id: string): Promise<ScamReport | null> {
-    // Try to find by year directory based on id
-    const year = new Date().getFullYear().toString();
-    return this.fetchJson(`data/reports/${year}/${id}.json`);
+    // Try year directory based on id prefix (SC-YYYY-...)
+    const yearMatch = id.match(/^SC-(\d{4})-/);
+    const year = yearMatch ? yearMatch[1] : new Date().getFullYear().toString();
+    const remote = await this.fetchJson(`data/reports/${year}/${id}.json`);
+    if (remote) return remote as ScamReport;
+    // Fallback to seed data.
+    return seedReportList.find((r) => r.id === id) || null;
   }
 
   async getSearchIndex(): Promise<SearchIndexEntry[]> {
     const idx = await this.fetchJson("data/indexes/search-index.json");
-    if (!idx || !Array.isArray(idx.entries)) return [];
-    return idx.entries as SearchIndexEntry[];
+    if (idx && Array.isArray(idx.entries) && idx.entries.length > 0) {
+      return idx.entries as SearchIndexEntry[];
+    }
+    // Fallback to bundled seed data.
+    return seedIndexList;
   }
 }
 
