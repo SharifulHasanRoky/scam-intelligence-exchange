@@ -9,6 +9,8 @@ import {
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SearchSection } from "@/components/site/search-section";
+import { TrustBar } from "@/components/site/trust-bar";
+import { FaqSection } from "@/components/site/faq-section";
 import { ReportForm } from "@/components/site/report-form";
 import { LatestReports } from "@/components/site/latest-reports";
 import { CategoryGrid } from "@/components/site/category-grid";
@@ -53,8 +55,9 @@ function PublicView({ onOpenAdmin }: { onOpenAdmin: () => void }) {
   return (
     <div className="space-y-16 sm:space-y-20 py-8 sm:py-12">
       {/* Hero + Search */}
-      <div className="container-page">
+      <div className="container-page space-y-6">
         <SearchSection />
+        <TrustBar />
       </div>
 
       {/* Report CTA */}
@@ -193,6 +196,66 @@ function PublicView({ onOpenAdmin }: { onOpenAdmin: () => void }) {
         </div>
       </section>
 
+      {/* SEO content: why use our scam checker */}
+      <section id="why" className="container-page scroll-mt-20">
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-wider" style={{ color: "var(--trust-teal)" }}>
+              Why use our scam checker
+            </p>
+            <h2 className="mt-1 text-2xl sm:text-3xl font-bold tracking-tight text-balance" style={{ color: "var(--trust-navy)" }}>
+              A free scam checker built for everyone
+            </h2>
+            <div className="mt-4 space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <p>
+                Our scam checker is a free, community-powered tool that helps you verify suspicious phone numbers, websites, emails and online profiles before you trust them. Whether you have received a strange WhatsApp message, found an unfamiliar online store, or been contacted by someone asking for money, the scam checker lets you see whether other people have reported the same identifier — in seconds.
+              </p>
+              <p>
+                Unlike paid lookup services, our scam checker never charges you to search, submit a report, or access safety information. There is no sign-up, no premium tier, and no paywall. The platform is funded by minimal, clearly-labelled advertising on the homepage and educational guides only. Search results and report pages are always ad-free.
+              </p>
+              <p>
+                Every result shows a clear evidence status — <strong>unverified</strong>, <strong>multiple independent reports</strong>, <strong>evidence reviewed</strong>, <strong>independently confirmed</strong>, or <strong>disputed</strong> — so you can judge how much weight to give it. A community report is a submitted experience, not a verdict. It does not, by itself, prove that anyone committed a crime.
+              </p>
+              <p>
+                For targeted checks, use one of our dedicated tools:{" "}
+                <a href="/website-scam-checker" className="font-medium underline-offset-4 hover:underline" style={{ color: "var(--trust-teal)" }}>Website Scam Checker</a>,{" "}
+                <a href="/phone-number-scam-checker" className="font-medium underline-offset-4 hover:underline" style={{ color: "var(--trust-teal)" }}>Phone Number Scam Checker</a>,{" "}
+                <a href="/email-scam-checker" className="font-medium underline-offset-4 hover:underline" style={{ color: "var(--trust-teal)" }}>Email Scam Checker</a>, or{" "}
+                <a href="/phishing-link-checker" className="font-medium underline-offset-4 hover:underline" style={{ color: "var(--trust-teal)" }}>Phishing Link Checker</a>.
+              </p>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-border bg-muted/30 p-5 sm:p-6">
+            <h3 className="text-sm font-semibold mb-3" style={{ color: "var(--trust-navy)" }}>
+              What you can check
+            </h3>
+            <ul className="space-y-2.5 text-sm">
+              {[
+                ["Phone numbers", "Mobile and landline numbers, normalized to E.164 for matching"],
+                ["Website domains", "e.g. example.com — matched against reported scam sites"],
+                ["Full URLs", "Specific pages, not just the domain"],
+                ["Email addresses", "Sender emails reported in phishing and romance scams"],
+                ["Social profiles", "Handles and profile URLs from Facebook, Instagram, Telegram and more"],
+                ["Business names", "Online sellers and businesses reported by customers"],
+              ].map(([k, v]) => (
+                <li key={k} className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "var(--trust-teal)" }} />
+                  <span>
+                    <span className="font-medium text-foreground">{k}.</span>{" "}
+                    <span className="text-muted-foreground">{v}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4 pt-4 border-t border-border">
+              <p className="text-xs text-muted-foreground">
+                Bank account and payment identifier searches are not included in the initial launch, pending privacy and legal review.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How it works */}
       <section id="how" className="container-page scroll-mt-20">
         <SectionHeader
@@ -276,6 +339,9 @@ function PublicView({ onOpenAdmin }: { onOpenAdmin: () => void }) {
           })}
         </div>
       </section>
+
+      {/* FAQ */}
+      <FaqSection />
 
       {/* Single homepage ad placement */}
       <section className="container-page scroll-mt-20">

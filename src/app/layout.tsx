@@ -18,20 +18,23 @@ const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://scam-intelligence-ex
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Scam Intelligence Exchange — Check Before You Trust",
-    template: "%s · Scam Intelligence Exchange",
+    default: "Scam Checker — Check Phone Numbers, Websites & Emails for Free",
+    template: "%s · Scam Checker",
   },
   description:
-    "A free, community-powered platform to search suspicious phone numbers, websites, emails and online profiles, report scam experiences, and access reliable scam-prevention intelligence.",
+    "Free scam checker. Check phone numbers, websites, emails and social profiles against community scam reports before you trust them. 100% free, no sign-up, anonymous.",
   keywords: [
     "scam checker",
+    "website scam checker",
+    "phone number scam check",
+    "email scam checker",
+    "phishing link checker",
+    "fake website checker",
+    "scam website detector",
+    "check if website is legit",
     "scam report",
-    "phone number lookup",
-    "website scam check",
-    "email scam",
     "fraud prevention",
     "community scam intelligence",
-    "scam protection",
   ],
   authors: [{ name: "Scam Intelligence Exchange" }],
   applicationName: "Scam Intelligence Exchange",
@@ -50,19 +53,19 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Scam Intelligence Exchange — Check Before You Trust",
+    title: "Scam Checker — Check Phone Numbers, Websites & Emails for Free",
     description:
-      "Free, community-powered scam intelligence. Search suspicious identifiers, report scams, and learn how to stay safe online.",
+      "Free scam checker. Check phone numbers, websites, emails and social profiles against community scam reports before you trust them. 100% free, no sign-up.",
     url: siteUrl,
-    siteName: "Scam Intelligence Exchange",
+    siteName: "Scam Checker",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scam Intelligence Exchange — Check Before You Trust",
+    title: "Scam Checker — Check Before You Trust",
     description:
-      "Free, community-powered scam intelligence. Search suspicious identifiers, report scams, and stay safe online.",
+      "Free scam checker for phone numbers, websites, emails and links. 100% free, no sign-up, anonymous.",
   },
   alternates: {
     canonical: "/",
@@ -75,6 +78,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Scam Checker",
+    alternateName: "Scam Intelligence Exchange",
+    url: siteUrl,
+    applicationCategory: "SecurityApplication",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    description:
+      "Free scam checker. Check phone numbers, websites, emails and social profiles against community scam reports before you trust them.",
+    publisher: {
+      "@type": "Organization",
+      name: "Scam Intelligence Exchange",
+      url: siteUrl,
+    },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -82,6 +107,10 @@ export default function RootLayout({
       >
         {children}
         <Toaster />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
       </body>
     </html>
   );
